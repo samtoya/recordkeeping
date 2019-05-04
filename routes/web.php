@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ImportController@index')->name('import.index');
+Route::post('/', 'ImportController@store')->name('import.store');
